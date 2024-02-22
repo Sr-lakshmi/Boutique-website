@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanThreads Boutique website</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-1 h-1" style="color:#494234;height:30px; width:30px ; cursor: pointer;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#wardrobe">Wardrobe</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul> 
+    </header>
+
+    <section id="home">
+        <div  class="left">
+            <div class="home-image ">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="slide1.jpeg" alt="dress1"></div>
+                        <div class="swiper-slide"><img src="slide2.jpg" alt="dress2"></div>
+                        <div class="swiper-slide"><img src="slide3.jpg" alt="dress3"></div> 
+                    </div> 
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev swb"></div>
+                    <div class="swiper-button-next swb"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        });
+        
+    </script>
+
+    <section id="wardrobe">
+
+        <div class="wardrobe-container">
+            <div class="wardrobe">
+                <img src="1.jpg" alt="wardrobe 1">
+                <h3>Party Wear</h3>
+                <p>Dress to Impress, Party to Express!</p>
+                <p class="rate">₹2599.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="2.jpg" alt="wardrobe 2">
+                <h3>Lehanga</h3>
+                <p>Twirl in Style, Lehenga Chic for a While!</p>
+                <p class="rate">₹5560.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="3.jpeg" alt="wardrobe 3">
+                <h3>Indo-Western</h3>
+                <p>Fusion Elegance, Indo-Western Brilliance!</p>
+                <p class="rate">₹4199.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="4.jpeg" alt="wardrobe 4">
+                <h3>Designer Silk</h3>
+                <p>Silk Perfection, Designer's Selection</p>
+                <p class="rate">₹17990.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="5.jpg" alt="wardrobe 5">
+                <h3>Saree</h3>
+                <p>Saree Chic,Timeless Elegance – Wrap Yourself in Tradition!</p>
+                <p class="rate">₹6799.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="6.jpg" alt="wardrobe 6">
+                <h3>Suits</h3>
+                <p>Suit Up for Success: Where Confidence Meets Couture!</p>
+                <p class="rate">₹8499.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="7.jpg" alt="wardrobe 7">
+                <h3>Wedding wear</h3>
+                <p>Elegance Unveiled, Love Detailed – Your Perfect Wedding Tale!</p>
+                <p class="rate">₹25699.00</p>
+            </div>
+            <div class="wardrobe">
+                <img src="8.jpeg" alt="wardrobe 8">
+                <h3>Unstitched</h3>
+                <p>Unleash Your Creativity, Stitch Your Style with Unstitched Elegance!</p>
+                <p class="rate">₹2499.00</p>
+            </div>
+        </div>                                             
+    </section>
+
+
+    <section id="order">
+
+        <div class="order-container">
+            <h2>Place an Order</h2>
+            <form id="order-form" action="/order" method="POST">
+                <div class="form-groups">
+                    <label for="dres">Select a Dress:</label>
+                    <select id="dres" name="dres">
+                        <option value="Party Wear">Party Wear</option>
+                        <option value="Lehanga">Lehanga</option>
+                        <option value="Indo-Western">Indo-Western</option>
+                        <option value="Designer Silk">Designer Silk</option>
+                        <option value="Saree">Saree</option>
+                        <option value="Suits">Suits</option>
+                        <option value="Wedding Wear">Wedding Wear</option>
+                        <option value="Unstitched">Unstitched</option>
+                    </select>
+                </div>
+                <div class="form-groups">
+                    <label for="quantity">Cloth piece:</label>
+                    <input style="width: 280px;;" type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <div class="form-groups">
+                    <label for="name">Name:</label>
+                    <input style="width: 280px;;" type="text" id="name" name="name" required>
+                </div>
+                <div class="form-groups">
+                    <label for="email">Email:</label>
+                    <input style="width: 280px;;" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-groups">
+                    <label for="phone">Phone Number:</label>
+                    <input style="width: 280px;;" type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-groups" style="display: flex ; align-items: center; justify-content: center ;">
+                    <button type="submit" id="submit-order">Confirm Order</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-content">
+            <div class="about-description">
+                <h2>About Us</h2>
+                <div class="mission">
+                    <div class="about-image1">
+                        <img src="about.jpg">
+                    </div>
+                    <h4>Our Mission</h4>
+                    <br>
+                    <p>Our mission is to curate a unique and delightful shopping experience for our customers,
+                        offering handpicked collections of premium and exclusive items. We strive to create a 
+                        haven for boutique enthusiasts, fostering a sense of individuality and style. Through 
+                        personalized service, a carefully curated selection, and a commitment to quality, we aim
+                        to redefine the boutique shopping journey, ensuring every visit is a celebration of
+                        distinctive fashion and refined taste.</p>
+                </div>
+                <div class="story">
+                    <div class="about-image2">
+                        <img src="story.jpeg">
+                    </div>
+                    <h4>Our Story</h4>
+                    <br>
+                    <p>Inspired by a passion for unique finds and a love for exceptional craftsmanship, our 
+                        boutique was born from a desire to share curated treasures with discerning individuals.
+                        Our story is woven with a dedication to celebrating individuality and embracing the 
+                        artistry behind each piece. From humble beginnings to a haven of curated elegance, we 
+                        invite you to be part of our journey, where every visit unveils a narrative of style, 
+                        sophistication, and the joy of discovery.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+
+        <div class="contact-form" >
+            <h2 style="text-align: center;">Contact Us</h2>
+            <form action="/cont"  method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <input id="text" name="message" placeholder="Share your thoughts"></input>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h2>Feel free to reach out to us...!</h2>
+            <p>UrbanThreads Boutique , Dindigul , Tamil Nadu </p>
+            <p>urbanthreads@gmail.com</p>
+            <p>9344866660</p>
+            <div class="social-links">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="far fa-envelope"></i>
+            </div>
+        </div>     
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Urban Threads Boutique. All rights reserved</p>
+    </footer>
+
+</body>
+</html>
+
+      
